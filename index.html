@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  	<title>Weather-UK</title>
+
+  	<meta charset="utf-8">
+
+  	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+	<link href="style.css" rel="stylesheet">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+	<div class="col-md-12 container-fluid">
+
+	<div class="row">
+
+	<nav class="navbar navbar-default">
+  		<div class="container-fluid container-title">
+  		<h2 class="navbar-text brand-title">Weather-UK</h2>
+  		</div>
+	</nav>
+
+		<div  class="col-md-4" id="map">
+
+			<svg class="center" height="700" width="500">
+
+			<image xlink:href="pictures/map2.png" x="0" y="0" height="600px" width="400px"/>
+			<text x="200" y="525" font-family="sans-serif" font-size="18px" fill="white" id="sh" onclick="active_sh()">Southamtpon</text>
+			<text x="155" y="485" font-family="sans-serif" font-size="18px" fill="white" id="cd" onclick="active_cd()">Cardiff</text>
+			<text x="255" y="455" font-family="sans-serif" font-size="18px" fill="white" id="of" onclick="active_of()">Oxford</text>
+			<text x="225" y="350" font-family="sans-serif" font-size="18px" fill="white" id="sf" onclick="active_sf()">Sheffield</text>
+			<text x="205" y="315" font-family="sans-serif" font-size="18px" fill="white" id="bf" onclick="active_bf()">Bradford</text>
+			
+			</svg>
+
+		</div>
+
+		<div class ="col-md-7 buttons" id="top">
+
+			<ul class="data">
+				<li><button type="button" class="btn btn-danger firstli" id="btn_bf" onclick="active_bf(); para();">Bradford</button></li>
+				<li><button type="button" class="btn btn-danger" id="btn_cd" onclick="active_cd(); para();">Cardiff</button></li>
+				<li><button type="button" class="btn btn-danger" id="btn_of" onclick="active_of(); para();">Oxford</button></li>
+				<li><button type="button" class="btn btn-danger" id="btn_sf" onclick="active_sf(); para();">Sheffield</button></li>
+				<li><button type="button" class="btn btn-danger" id="btn_sh" onclick="active_sh(); para();">Southamtpon</button></li>
+			</ul>
+
+		</div>
+
+		<div class ="col-md-7 buttons">
+
+			<ul class="data">
+				<li><button type="button" class="btn btn-danger firstli" id="btn_max" onclick="active_btn_max(); para();">max. Temp. (C&deg)</button></li>
+				<li><button type="button" class="btn btn-danger" id="btn_min" onclick="active_btn_min(); para();">min. Temp. (C&deg)</button></li>
+				<li><button type="button" class="btn btn-danger" id="btn_rain" onclick="active_btn_rain(); para();">Rain (mm)</button></li>
+				<li><button type="button" class="btn btn-danger" id="btn_sun" onclick="active_btn_sun(); para();">Sun hours</button></li>
+			</ul>
+
+		</div>
+
+		<div class = "col-md-7 buttons comp">
+
+		<button type="button" class="btn btn-danger compare" id="btn_comp" onclick="setcolor(); compare();">Compare</button>
+
+		</div>
+
+		<div class ="col-md-7 aGraph" id="graph">
+
+		</div>
+
+		<div class="navbar navbar-default footer">
+            <div class="container-fluid container-footer">
+            <p class="navbar-text info"><a href="info.html" class="information" target="_blank">Info</a></p>
+            <p class="navbar-text aligne-text">&copy; 2015 Elektrotehnički fakultet Osijek | Developed by Kristian Pavić & Matko Turalija</p>
+		</div>
+
+	</div>
+
+	</div>
+
+	<script src="js.js"></script>
+	<script src="functions/bradford_max.js"></script>
+	<script src="functions/bradford_min.js"></script>
+	<script src="functions/bradford_rain.js"></script>
+	<script src="functions/bradford_sun.js"></script>
+	<script src="functions/cardiff_max.js"></script>
+	<script src="functions/cardiff_min.js"></script>
+	<script src="functions/cardiff_rain.js"></script>
+	<script src="functions/cardiff_sun.js"></script>
+	<script src="functions/oxford_max.js"></script>
+	<script src="functions/oxford_min.js"></script>
+	<script src="functions/oxford_rain.js"></script>
+	<script src="functions/oxford_sun.js"></script>
+	<script src="functions/sheffield_max.js"></script>
+	<script src="functions/sheffield_min.js"></script>
+	<script src="functions/sheffield_rain.js"></script>
+	<script src="functions/sheffield_sun.js"></script>
+	<script src="functions/southampton_max.js"></script>
+	<script src="functions/southampton_min.js"></script>
+	<script src="functions/southampton_rain.js"></script>
+	<script src="functions/southampton_sun.js"></script>
+	<script src="functions/comp_max.js"></script>
+	<script src="functions/comp_min.js"></script>
+	<script src="functions/comp_rain.js"></script>
+	<script src="functions/comp_sun.js"></script>
+
+</body>
+</html>
